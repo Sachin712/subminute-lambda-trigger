@@ -1,9 +1,6 @@
 {
   "name": "subminute-lambda-trigger",
   "version": "0.1.0",
-  "bin": {
-    "subminute-lambda-trigger": "bin/subminute-lambda-trigger.js"
-  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
@@ -24,8 +21,10 @@
     "@aws-cdk/aws-events-targets": "^1.204.0",
     "@aws-cdk/aws-iam": "^1.204.0",
     "@aws-cdk/aws-lambda": "^1.204.0",
+    "@aws-sdk/client-sns": "^3.577.0",
     "aws-cdk-lib": "2.142.1",
     "constructs": "^10.0.0",
-    "source-map-support": "^0.5.21"
+    "source-map-support": "^0.5.21",
+    "update": "^0.7.4"
   }
 }
