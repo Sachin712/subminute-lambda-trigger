@@ -5,7 +5,8 @@ import * as lambda from "aws-cdk-lib/aws-lambda";
 import { Construct } from "constructs";
 
 interface SnsStackProps extends cdk.StackProps {
-  workerLambdaFunction: lambda.Function;
+  workerLambdaFunction: lambda.Function,
+  workerLambdaFunction2: lambda.Function
 }
 
 export class SnsStack extends cdk.Stack {
@@ -21,6 +22,9 @@ export class SnsStack extends cdk.Stack {
     // Subscribe the Lambda function to the SNS topic
     topic.addSubscription(
       new subs.LambdaSubscription(props.workerLambdaFunction)
+    );
+    topic.addSubscription(
+      new subs.LambdaSubscription(props.workerLambdaFunction2)
     );
   }
 }

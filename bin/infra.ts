@@ -15,8 +15,9 @@ const lambdaStack = new LambdaStack(app, 'LambdaStack', {
 });
 
 // sns Stack
-const snsStack = new SnsStack(app, 'SnsStack',{
-  workerLambdaFunction: lambdaStack.workerLambdaFunction
+new SnsStack(app, 'SnsStack',{
+  workerLambdaFunction: lambdaStack.workerLambdaFunction,
+  workerLambdaFunction2: lambdaStack.workerLambdaFunction2
 });
 
 
