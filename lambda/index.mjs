@@ -43,7 +43,7 @@ async function publishToSNSForAllItems() {
     }
 
     const input = { // PublishInput
-    TopicArn: `arn:aws:sns:us-east-2:746827937111:Broker-Topic`,
+    TopicArn: process.env.SNS_TOPIC_ARN,
     Message: JSON.stringify(msg), // required
     };
 

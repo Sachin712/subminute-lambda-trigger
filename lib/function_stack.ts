@@ -18,7 +18,7 @@ export class LambdaStack extends cdk.Stack {
     super(scope, id, props);
 
     let envVariables = {
-      TEMP: "sachin",
+      SNS_TOPIC_ARN: globals.snsTopicArn,
     };
 
     // Define the Lambda function
